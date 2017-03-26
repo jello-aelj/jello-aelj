@@ -103,14 +103,14 @@
 
                         <div class="form-group col-lg-6">
                             <label>Name</label>
-                            <input type="text" name="name"class="form-control">
+                            <input type="text" name="name"class="form-control"placeholder="Your name">
                         </div> 
 
                         <div class="clearfix"></div>
 
                         <div class="form-group col-lg-6">
                             <label>Email Address</label>
-                            <input type="email" name="_replyto"class="form-control">
+                            <input type="email" name="_replyto"class="form-control"placeholder="Your email">
                         </div>
 
                         <div class="clearfix"></div>
@@ -118,7 +118,7 @@
                          <div class="form-group col-lg-6">
                             <label>Japanese Level</label>
                             <select name="Japanese Level" class="form-control">
-                                <option value="null"></option>
+                                <option value="" disabled selected>Select your level</option>
                                 <option value="beginner">Beginner</option>
                                 <option value="intermidiate">Intermidiate</option>
                                 <option value="advanced">Advanced</option>
@@ -130,12 +130,13 @@
 
                         <div class="form-group col-lg-6">
                             <label>Comments</label>
-                            <textarea type="text" name="Comments" class="form-control"></textarea>
+                            <textarea type="text" name="Comments" class="form-control"placeholder="Your comments"></textarea>
                         </div>
                         
                         <div class="clearfix"></div>
-                    
-                        <input type="submit" value="Send">
+                        <div class="form-group col-lg-6">
+                            <input type="submit" value="Send">
+                        </div>
 
                     </form>
                     
