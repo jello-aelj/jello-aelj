@@ -208,5 +208,8 @@ iframe {
     }
 }
 
+select[disabled]{
+    color = gray;
+}
 
 

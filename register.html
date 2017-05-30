@@ -23,6 +23,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
+    
+    <script src="js/emailValidation.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -96,21 +99,21 @@
 
                     
                      
-                     <form method="POST" action="http://formspree.io/alex.stelzig@hotmail.fr">
+                     <form id="form">
                         
                         <input type="hidden" name="_subject" value="JELLO-AELJ REGISTRATION - WEBSITE" />
                         <input type="hidden" name="_next" value="//jello-aelj.github.io/register.html" />
 
                         <div class="form-group col-lg-6">
                             <label>Name</label>
-                            <input type="text" name="name"class="form-control"placeholder="Your name">
+                            <input id="name" type="text" name="name"class="form-control"placeholder="Your name">
                         </div> 
 
                         <div class="clearfix"></div>
 
                         <div class="form-group col-lg-6">
                             <label>Email Address</label>
-                            <input type="email" name="_replyto"class="form-control"placeholder="Your email">
+                            <input id="email" type="email" name="_replyto"class="form-control"placeholder="Your email">
                         </div>
 
                         <div class="clearfix"></div>
@@ -130,57 +133,19 @@
 
                         <div class="form-group col-lg-6">
                             <label>Comments</label>
-                            <textarea type="text" name="Comments" class="form-control"placeholder="Your comments"></textarea>
+                            <textarea id="comments" type="text" name="Comments" class="form-control"placeholder="Your comments"></textarea>
                         </div>
                         
                         <div class="clearfix"></div>
+                        
                         <div class="form-group col-lg-6">
-                            <input type="submit" value="Send">
+                            <a href="javascript:submitEmail()">Submit</a>
+                            <!-- <input type="submit" value="Send"> -->
                         </div>
-
                     </form>
-                    
-                    
 
 
-                   <!--  <form method="POST" action="http://formspree.io/alex.stelzig@hotmail.fr">
-                        <div class="row">
-                            <div class="form-group col-lg-6">
-                                <label>Name*</label>
-                                <input type="text" class="form-control">
-                            </div> 
 
-                            <div class="clearfix"></div>
-
-                            <div class="form-group col-lg-6">
-                                <label>Email Address*</label>
-                                <input type="email" name="email" placeholder="Your email" class="form-control">
-                            </div>
-
-                            <div class="clearfix"></div>
-
-                            <div class="form-group col-lg-6">
-                                <label>Japanese Level*</label>
-                                <select class="form-control">
-                                    <option value="null"></option>
-                                    <option value="beginner">Beginner</option>
-                                    <option value="intermediate">Intermediate</option>
-                                    <option value="advanced">Advanced</option>
-                                    <option value="native">Native</option>
-                                </select>
-                            </div>
-                            <div class="clearfix"></div>
-
-
-                            <div class="form-group col-lg-11">
-                                <label>Comments (optional)</label>
-                                <textarea name="message" placeholder="Your message" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <button type="submit">Send</button>
-                            </div>
-                        </div>
-                    </form>  -->
                 </div>
             </div>
         </div>
@@ -200,6 +165,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>
