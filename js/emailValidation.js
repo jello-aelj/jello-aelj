@@ -17,7 +17,7 @@ function submitEmail(){
         
         //send to formspree
         $.ajax({
-            url:'http://formspree.io/alex.stelzig@hotmail.fr',
+            url:'https://formspree.io/alex.stelzig@hotmail.fr',
             method:'POST',
             data: {message: "hello!"},
             dataType:"json",
