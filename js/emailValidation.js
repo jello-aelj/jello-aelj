@@ -75,7 +75,7 @@ function submitEmail(){
                  email:email,
                 comments:comments,
                 // Japaneselevel:level,
-                _subject:'My Form Submission'},
+                _subject:'My Form Submission',},
             dataType:"json",
             // success:function() {
             //     // $('#formBlock').hide();
