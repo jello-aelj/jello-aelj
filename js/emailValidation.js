@@ -67,26 +67,25 @@ function submitEmail(){
             console.log('success'); 
 
             //send to formspree
-        $.ajax({
-            url:'https://formspree.io/alex.stelzig@hotmail.fr',
-            method:'POST',
-            data: {name:name.val(),
-                _replyto:email.val(),
-                 email:email.val(),
-                comments:comments.val(),
-                Japaneselevel:level.options[levelSelector.selectedIndex].value,
-                _subject:'JELLO-AEJL REGISTRATION REQUEST (from website)'},
-            dataType:"json",
-            success:function() {
-                // $('#formBlock').hide();
-                // $('#thankyouBlock').show();
-            }   
-
-        });     
+            $.ajax({
+                url:'https://formspree.io/alex.stelzig@hotmail.fr',
+                method:'POST',
+                data: {name:name.val(),
+                    _replyto:email.val(),
+                     email:email.val(),
+                    comments:comments.val(),
+                    Japaneselevel:level.options[levelSelector.selectedIndex].value,
+                    _subject:'JELLO-AEJL REGISTRATION REQUEST (from website)'},
+                dataType:"json",
+                success:function() {
+                    // $('#formBlock').hide();
+                    // $('#thankyouBlock').show();
+                }   
+            });     
         }
 
 
 
         
-    };
+};
 
