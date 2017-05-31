@@ -26,11 +26,11 @@ function submitEmail(){
         var nameEmpty = name.val().trim() == "";
         var emailEmpty = email.val().trim() == "";
         var levelEmpty = level == "";
+        var emailFormatInvalid = !validateEmail(email.val());
         
-        if(nameEmpty || emailEmpty || levelEmpty){
+        if(nameEmpty || emailEmpty || levelEmpty || emailFormatInvalid){
 
             if(nameEmpty){
-                console.log("name empty");
                 document.getElementById("name").style.borderColor = "red";
                 document.getElementById("nameError").style.display = "unset";
             }else{
@@ -39,16 +39,20 @@ function submitEmail(){
             }
 
             if(emailEmpty){
-                console.log("email empty");
                 document.getElementById("email").style.borderColor = "red";
                 document.getElementById("emailError").style.display = "unset";
+                document.getElementById("emailInvalidError").style.display = "none";
+            }else if(emailFormatInvalid){
+                document.getElementById("email").style.borderColor = "red";
+                document.getElementById("emailError").style.display = "none";
+                 document.getElementById("emailInvalidError").style.display = "unset";
             }else{
                 document.getElementById("email").style.borderColor = "#CCCCCC";
                 document.getElementById("emailError").style.display = "none";
+                document.getElementById("emailInvalidError").style.display = "none";
             }
 
             if(levelEmpty){
-                console.log("level empty");
                 document.getElementById("level").style.borderColor = "red";
                 document.getElementById("levelError").style.display = "unset";
             }else{
@@ -56,7 +60,6 @@ function submitEmail(){
                 document.getElementById("levelError").style.display = "none";
             }
 
-            console.log('failed'); 
         }else{
             document.getElementById("name").style.borderColor = "#CCCCCC";
             document.getElementById("nameError").style.display = "none";
