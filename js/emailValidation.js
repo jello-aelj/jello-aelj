@@ -65,10 +65,8 @@ function submitEmail(){
             document.getElementById("level").style.borderColor = "#CCCCCC";
             document.getElementById("levelError").style.display = "none";
             console.log('success'); 
-        }
 
-
-        //send to formspree
+            //send to formspree
         $.ajax({
             url:'https://formspree.io/alex.stelzig@hotmail.fr',
             method:'POST',
@@ -85,6 +83,10 @@ function submitEmail(){
             }   
 
         });     
+        }
+
+
+
         
     };
 
