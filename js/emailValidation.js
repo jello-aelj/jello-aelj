@@ -70,17 +70,17 @@ function submitEmail(){
         $.ajax({
             url:'https://formspree.io/alex.stelzig@hotmail.fr',
             method:'POST',
-            data: {name:name,
-                _replyto:email,
-                 email:email,
-                comments:comments,
-                // Japaneselevel:level,
-                _subject:'My Form Submission',},
+            data: {name:name.val(),
+                _replyto:email.val(),
+                 email:email.val(),
+                comments:comments.val(),
+                Japaneselevel:level.val(),
+                _subject:'JELLO-AEJL REGISTRATION REQUEST (from website)'},
             dataType:"json",
-            // success:function() {
-            //     // $('#formBlock').hide();
-            //     // $('#thankyouBlock').show();
-            // }   
+            success:function() {
+                // $('#formBlock').hide();
+                // $('#thankyouBlock').show();
+            }   
 
         });     
         }
