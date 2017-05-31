@@ -23,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- icon -->
+    <link rel="icon" href="icon.png">
 
     <script src="js/emailValidation.js"></script>
 
@@ -104,23 +106,30 @@
                         <input type="hidden" name="_subject" value="JELLO-AELJ REGISTRATION - WEBSITE" />
                         <input type="hidden" name="_next" value="//jello-aelj.github.io/register.html" />
 
+                        <!-- name input -->
                         <div class="form-group col-lg-6">
-                            <label>Name</label>
-                            <input id="name" type="text" name="name"class="form-control"placeholder="Your name">
+                            <label>Name <span style="color: red">*</span></label>
+                            <span id="nameError" style="color: red; display: none">field cannot be empty</span>
+                            <input autocomplete="off" id="name" type="text" name="name"
+                            class="form-control"placeholder="Your name" style="border:1px solid #CCCCCC">
                         </div> 
 
                         <div class="clearfix"></div>
 
+                        <!-- email input -->
                         <div class="form-group col-lg-6">
-                            <label>Email Address</label>
-                            <input id="email" type="email" name="_replyto"class="form-control"placeholder="Your email">
+                            <label>Email Address <span style="color: red">*</span></label>
+                            <span id="emailError" style="color: red; display: none">field cannot be empty</span>
+                            <input autocomplete="off" id="email" type="email" name="_replyto"class="form-control"placeholder="Your email" style="border:1px solid #CCCCCC">
                         </div>
 
                         <div class="clearfix"></div>
 
+                        <!-- level input -->
                          <div class="form-group col-lg-6">
-                            <label>Japanese Level</label>
-                            <select name="Japanese Level" class="form-control">
+                            <label>Japanese Level <span style="color: red">*</span></label>
+                            <span id="levelError" style="color: red; display: none">field cannot be empty</span>
+                            <select id="level" name="Japanese Level" class="form-control" style="border:1px solid #CCCCCC">
                                 <option value="" disabled selected>Select your level</option>
                                 <option value="beginner">Beginner</option>
                                 <option value="intermidiate">Intermidiate</option>
@@ -131,17 +140,26 @@
 
                         <div class="clearfix"></div>
 
+                        <!-- comments input -->
                         <div class="form-group col-lg-6">
                             <label>Comments</label>
-                            <textarea id="comments" type="text" name="Comments" class="form-control"placeholder="Your comments"></textarea>
+                            <textarea autocomplete="off" id="comments" type="text" name="Comments" class="form-control"placeholder="Your comments" style="border:1px solid #CCCCCC"></textarea>
                         </div>
                         
                         <div class="clearfix"></div>
                         
+                        <!-- submit - doesnt work on local, needs to be on a server -->
                         <div class="form-group col-lg-6">
-                            <a href="javascript:submitEmail()">Submit</a>
-                            <!-- <input type="submit" value="Send"> -->
+    
+                                <button  onclick="location.href='javascript:submitEmail()'" type="button">
+                                Send</button>
+
+                                <small style="float:right"><span style="color: red">*</span> fields are required</small>
+
+
+                            
                         </div>
+
                     </form>
 
 
