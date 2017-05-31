@@ -74,7 +74,7 @@ function submitEmail(){
                 _replyto:email.val(),
                  email:email.val(),
                 comments:comments.val(),
-                Japaneselevel:level.val(),
+                Japaneselevel:level.options[levelSelector.selectedIndex].value,
                 _subject:'JELLO-AEJL REGISTRATION REQUEST (from website)'},
             dataType:"json",
             success:function() {
