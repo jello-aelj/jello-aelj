@@ -74,13 +74,13 @@ function submitEmail(){
                 _replyto:email,
                  email:email,
                 comments:comments,
-                Japaneselevel:level,
+                // Japaneselevel:level,
                 _subject:'My Form Submission'},
             dataType:"json",
-            success:function() {
-                // $('#formBlock').hide();
-                // $('#thankyouBlock').show();
-            }   
+            // success:function() {
+            //     // $('#formBlock').hide();
+            //     // $('#thankyouBlock').show();
+            // }   
 
         });     
         }
