@@ -31,6 +31,9 @@
     <!-- icon -->
     <link rel="icon" href="icon.png">
 
+         <!-- social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -58,22 +61,24 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a id="en" href="index.html">Home</a>
+                        <a id="fr" href="index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a id="en" href="about.html">About</a>
+                        <a id="fr" href="about.html">À propos</a>
                     </li>
                     <li>
-                        <a href="news.html">News</a>
+                        <a id="en" href="news.html">News</a>
+                        <a id="fr" href="news.html">Nouvelles</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a id="en" href="register.html">Register</a>
+                        <a id="fr" href="register.html">Enregistrer</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="">Français</a>
+                        <a id="en" href="javascript:toggleLanguage()">Français</a>
+                        <a id="fr" href="javascript:toggleLanguage()">English</a>
                     </li>
                 </ul>
             </div>
@@ -95,29 +100,21 @@
                     <hr>
                 </div>
 
-                
-                    <!-- <a class="twitter-timeline" data-width="450" data-height="750" href="https://twitter.com/jello_aelj">Tweets by jello_aelj</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-
                 <div class="col-md-6">
 
                     <h2 class="intro-text text-center">
                         <strong>Information</strong>
                     </h2>
                     <hr>
-
-
-                    <p>The Japanese Enthusiast Language Learning Organisation club is currently not having any club activities because of summer. We wish that everyone have a great summer and we are looking forward to see you again in the 2017 Fall semester!</p>
+                    <p id="en" >The Japanese Enthusiast Language Learning Organisation club is currently not having any club activities because of summer. We wish that everyone have a great summer and we are looking forward to see you again in the 2017 Fall semester!</p>
+                    <p id="fr" >L'Association des Enthousiastes de la Langue Japonaise n'a présentement aucune activité durant le semestre d'été. Nous souhaitons une merveilleuse été à tous et nous espérons de vous revoir au semestre d'automne 2017!</p>
 
                     <hr>
-
                     <img class="img-responsive img-border-left" src="img/home/pivik-logo.jpg" alt="">
 
                     <div class="clearfix"></div>
-
-
-                    
-
-                    <p>JELLO would like to thank our campus convenience store Pivik for sponsoring us with free cups this past school year! These are the cups that we used for green tea every week so we are very grateful!</p>
+                    <p id="en" >JELLO would like to thank our campus convenience store Pivik for sponsoring us with free cups this past school year! These are the cups that we used for green tea every week so we are very grateful!</p>
+                    <p id="fr" >L’AELJ aimerait remercier notre commanditaire Pivik, le dépanneur de l’université d’Ottawa, qui nous a fourni des verres gratuitement durant la dernière année scolaire. Ce sont les verres que nous avons utilisés pour le thé vert à chaque semaine, et donc nous en sommes très reconnaissants.</p>
                 </div>
 
 
@@ -127,7 +124,8 @@
                     </h2>
                     <hr>
 
-                    <p>To have the latest news of our club, please follow us on <a href="https://www.facebook.com/jello.aelj/" target="_blank">facebook</a>!</p>
+                    <p id="en">To have the latest news of our club, please follow us on <a href="https://www.facebook.com/jello.aelj/" target="_blank">facebook</a>!</p>
+                    <p id="fr">Pour avoir les dernières actualités de notre club, s'il vous plait suivez nous sur <a href="https://www.facebook.com/jello.aelj/" target="_blank">facebook</a>!</p>
 
                     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fjello.aelj%2F&tabs=timeline&width=450&height=750&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="450" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div>
@@ -149,8 +147,13 @@
 
     <footer>
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12 text-center">
+                    <a href="https://www.facebook.com/jello.aelj/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://twitter.com/jello_aelj?lang=en" class="fa fa-twitter" target="_blank"></a>
+                    <a href="mailto:jello.aelj@gmail.com" class="fa fa-envelope" target="_blank"></a>
+
                     <p>Copyright &copy; JELLO - AELJ 2017</p>
                 </div>
             </div>
@@ -162,6 +165,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>
+
+        <!-- language script -->
+    <script src="js/languageScript.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>

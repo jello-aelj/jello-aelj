@@ -35,6 +35,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+         <!-- social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -62,22 +65,24 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a id="en" href="index.html">Home</a>
+                        <a id="fr" href="index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a id="en" href="about.html">About</a>
+                        <a id="fr" href="about.html">À propos</a>
                     </li>
                     <li>
-                        <a href="news.html">News</a>
+                        <a id="en" href="news.html">News</a>
+                        <a id="fr" href="news.html">Nouvelles</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a id="en" href="register.html">Register</a>
+                        <a id="fr" href="register.html">Enregistrer</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href='javascript:Localize.setLanguage("fr")'>Français</a>
+                        <a id="en" href="javascript:toggleLanguage()">Français</a>
+                        <a id="fr" href="javascript:toggleLanguage()">English</a>
                     </li>
                 </ul>
             </div>
@@ -92,11 +97,16 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Registration
+                    <h2 id="en" class="intro-text text-center">Registration
                         <strong>form</strong>
                     </h2>
+                    <h2 id="fr" class="intro-text text-center">Formulaire
+                        <strong>d'inscription</strong>
+                    </h2>
                     <hr>
-                    <p class="center">Interested in learning the Japanese language or Japanese culture? Come learn, meet new people, and have fun with us! The best way to keep yourself up to date to the latest news and activities of JELLO-AELJ is to register to our newsletter. <br> You can register here or send an email to <a href="mailto:jello.aelj@gmail.com" target="_top">jello.aelj@gmail.com</a></p>
+                    <p id="en" class="center">Interested in learning the Japanese language or Japanese culture? Come learn, meet new people, and have fun with us! The best way to keep yourself up to date to the latest news and activities of JELLO-AELJ is to register to our newsletter. <br>You can register here or send an email to <a href="mailto:jello.aelj@gmail.com" target="_top">jello.aelj@gmail.com</a></p>
+
+                    <p id="fr" class="center">Intéressé à apprendre la langue ou la culture japonaise? Venez apprendre, rencontrer des nouvelles personnes et s'amusez avec nous! La meilleure façon de rester au courant des dernières nouvelles et des activités de JELLO-AELJ est de t'enregistrer à nos bulletins électroniques.<br>Vous pouvez vous inscrire ici ou envoyer un email à <a href="mailto:jello.aelj@gmail.com" target="_top">jello.aelj@gmail.com</a></p>
 
 
                     
@@ -108,34 +118,38 @@
 
                         <!-- name input -->
                         <div class="form-group col-lg-6">
-                            <label>Name <span style="color: red">*</span></label>
-                            <span id="nameError" style="color: red; display: none">field cannot be empty</span>
+
+                            <label id="en">Name <span style="color: red">*</span></label>
+                            <label id="fr">Nom <span style="color: red">*</span></label>
+                            <span id="nameError" style="color: red; display: none">field cannot be empty / champs doit être rempli</span>
                             <input autocomplete="off" id="name" type="text" name="name"
-                            class="form-control"placeholder="Your name" style="border:1px solid #CCCCCC">
+                            class="form-control" style="border:1px solid #CCCCCC">
                         </div> 
 
                         <div class="clearfix"></div>
 
                         <!-- email input -->
                         <div class="form-group col-lg-6">
-                            <label>Email Address <span style="color: red">*</span></label>
-                            <span id="emailError" style="color: red; display: none">field cannot be empty</span>
-                            <span id="emailInvalidError" style="color: red; display: none">invalid email format</span>
-                            <input autocomplete="off" id="email" type="email" name="_replyto"class="form-control"placeholder="Your email" style="border:1px solid #CCCCCC">
+                            <label id="en">Email Address <span style="color: red">*</span></label>
+                            <label id="fr">Adresse Courriel <span style="color: red">*</span></label>
+                            <span id="emailError" style="color: red; display: none">field cannot be empty / champs doit être rempli</span>
+                            <span id="emailInvalidError" style="color: red; display: none">invalid email format / format d'email invalide</span>
+                            <input autocomplete="off" id="email" type="email" name="_replyto"class="form-control" style="border:1px solid #CCCCCC">
                         </div>
 
                         <div class="clearfix"></div>
 
                         <!-- level input -->
                          <div class="form-group col-lg-6">
-                            <label>Japanese Level <span style="color: red">*</span></label>
-                            <span id="levelError" style="color: red; display: none">field cannot be empty</span>
+                            <label id="en">Japanese Level <span style="color: red">*</span></label>
+                            <label id="fr">Niveau de langue japonaise <span style="color: red">*</span></label>
+                            <span id="levelError" style="color: red; display: none">field cannot be empty / champs doit être rempli</span>
                             <select id="level" name="Japanese Level" class="form-control" style="border:1px solid #CCCCCC">
-                                <option value="" disabled selected>Select your level</option>
-                                <option value="beginner">Beginner</option>
-                                <option value="intermidiate">Intermediate</option>
-                                <option value="advanced">Advanced</option>
-                                <option value="native">Native</option>
+                                <option value="" disabled selected>-----</option>
+                                <option value="beginner">Beginner/Débutant</option>
+                                <option value="intermidiate">Intermediate/Intermédiaire</option>
+                                <option value="advanced">Advanced/Avancée</option>
+                                <option value="native">Native/Langue Maternelle</option>
                             </select>
                         </div>
 
@@ -143,22 +157,29 @@
 
                         <!-- comments input -->
                         <div class="form-group col-lg-6">
-                            <label>Comments</label>
-                            <textarea autocomplete="off" id="comments" type="text" name="Comments" class="form-control"placeholder="Your comments" style="border:1px solid #CCCCCC"></textarea>
+                            <label id="en">Comments</label>
+                            <label id="fr">Commentaires</label>
+                            <textarea autocomplete="off" id="comments" type="text" name="Comments" class="form-control" style="border:1px solid #CCCCCC"></textarea>
                         </div>
                         
                         <div class="clearfix"></div>
                         
                         <!-- submit - doesnt work on local, needs to be on a server -->
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-lg-3">
     
-                                <button  onclick="location.href='javascript:submitEmail()'" type="button">
+                                <button id="en" onclick="location.href='javascript:submitEmail()'" type="button">
                                 Send</button>
 
-                                <small style="float:right"><span style="color: red">*</span> fields are required</small>
-
+                                <button id="fr" onclick="location.href='javascript:submitEmail()'" type="button">
+                                Soumettre</button>
 
                             
+                        </div>
+
+                        <div class="form-group col-lg-3">
+
+                                <small id="en" style="float:right"><span style="color: red">*</span> fields are required</small>
+                                <small id="fr" style="float:right">Les champs <span style="color: red">*</span> sont obligatoires</small>
                         </div>
 
                     </form>
@@ -175,17 +196,26 @@
 
     <footer>
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12 text-center">
+                    <a href="https://www.facebook.com/jello.aelj/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://twitter.com/jello_aelj?lang=en" class="fa fa-twitter" target="_blank"></a>
+                    <a href="mailto:jello.aelj@gmail.com" class="fa fa-envelope" target="_blank"></a>
+
                     <p>Copyright &copy; JELLO - AELJ 2017</p>
                 </div>
             </div>
         </div>
     </footer>
 
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <!-- language script -->
+    <script src="js/languageScript.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>

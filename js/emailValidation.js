@@ -10,7 +10,7 @@ function validateEmail(email) {
 }
 
 function submitEmail(){
-        
+
         //get the name field value
         var name = $('#name');
         //get the name field value
@@ -83,6 +83,7 @@ function submitEmail(){
                 success:function() {
                     // $('#formBlock').hide();
                     // $('#thankyouBlock').show();
+                    alert('Thank you for your registration!')
                 }   
             });     
         }

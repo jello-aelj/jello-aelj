@@ -31,6 +31,9 @@
     <!-- icon -->
     <link rel="icon" href="icon.png">
 
+         <!-- social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -58,22 +61,24 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a id="en" href="index.html">Home</a>
+                        <a id="fr" href="index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
-                    </li>
-                   <li>
-                        <a href="news.html">News</a>
+                        <a id="en" href="about.html">About</a>
+                        <a id="fr" href="about.html">À propos</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a id="en" href="news.html">News</a>
+                        <a id="fr" href="news.html">Nouvelles</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a id="en" href="register.html">Register</a>
+                        <a id="fr" href="register.html">Enregistrer</a>
                     </li>
                     <li>
-                        <a href='javascript:Localize.setLanguage("fr")'>Français</a>
+                        <a id="en" href="javascript:toggleLanguage()">Français</a>
+                        <a id="fr" href="javascript:toggleLanguage()">English</a>
                     </li>
                 </ul>
             </div>
@@ -88,7 +93,10 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">About
+                    <h2 id="en" class="intro-text text-center">About
+                        <strong>JELLO / AELJ</strong>
+                    </h2>
+                    <h2 id="fr" class="intro-text text-center">À Propos de
                         <strong>JELLO / AELJ</strong>
                     </h2>
                     <hr>
@@ -96,12 +104,19 @@
                 <div class="col-md-6">
                     <img class="img-responsive img-border-left" src="img/about/about-img.jpg" alt="">
                 </div>
-                <div class="col-md-6">
-                    <p>JELLO is a club for students at University of Ottawa that serves to provide a space for Japanese language learners to come together to practice and learn Japanese through cultural and educational activities since January 2012.</p>
-                    <p>Feel free to drop by to one of our activities during Friday evenings!</p>
+                <div id="en" class="col-md-6">
+                    <p>JELLO/AELJ is a club for students at University of Ottawa since January 2012 that serves to provide a space for Japanese language learners to come together to practice and learn Japanese through cultural and educational activities.</p>
+                    <p>Feel free to drop by to one of our activities! Everyone is welcome and there is no membership fee! We usually have our meetings during Fridays at 6pm.</p>
 
-                    <p>You can find our club's most recent Constitution <a href="docs/JelloConstitution.pdf" target="_blank">here</a></p>
+                    <p>You can find our club's Constitution <a href="docs/JelloConstitution.pdf" target="_blank">here</a></p>
                 </div>
+                <div id="fr" class="col-md-6">
+                    <p>JELLO/AELJ est un club pour les étudiants de l'Université d'Ottawa depuis janvier 2012 qui apprennent la langue japonaise et souhaitent se pratiquer et s'améliorer en participant à des activités culturelles et éducatives.</p>
+                    <p>N'hésitez pas de venir faire un tour à une de nos activités! Tout le monde est bienvenu et c'est gratuit! Les activités se déroulent habituellement les vendredis soirs à 18h. Pour plus d'information sur les activités, référer vous à notre facebook ou nos bulletins de nouvelles.</p>
+
+                    <p>Vous pouvez trouver notre Constitution <a href="docs/JelloConstitution.pdf" target="_blank">ici</a> (en anglais seulement)</p>
+                </div>
+
                 <div class="clearfix"></div>
             
             </div>
@@ -110,10 +125,17 @@
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
+                <div id="en" class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">Executive
                         <strong>Team</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div id="fr" class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Équipe
+                        <strong>Exécutive</strong>
                     </h2>
                     <hr>
                 </div>
@@ -121,21 +143,24 @@
                     <img class="img-responsive" src="http://placehold.it/750x450" alt="">
                     <h3>Yoko Kawaguchi
                         <br>
-                        <small>President</small>
+                        <small id="en">President</small>
+                        <small id="fr">Présidente</small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="http://placehold.it/750x450" alt="">
                     <h3>Tamami Ichimura
                         <br>
-                        <small>Vice President</small>
+                        <small id="en">Vice President</small>
+                        <small id="fr">Vice Présidente</small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>Tomoka Kashiwazaki
+                    <h3>Alexandre Stelzig
                         <br>
-                        <small>Treasurer</small>
+                        <small id="en">Treasurer</small>
+                        <small id="fr">Trésorier</small>
                     </h3>
                 </div>
                 <div class="clearfix"></div>
@@ -143,21 +168,24 @@
                     <img class="img-responsive" src="http://placehold.it/750x450" alt="">
                     <h3>Hafsa Kaouache
                         <br>
-                        <small>Executive Secretariat</small>
+                        <small id="en">Executive Secretariat</small>
+                        <small id="fr">Secrétariat exécutive</small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="http://placehold.it/750x450" alt="">
                     <h3>Guido Calderini 
                         <br>
-                        <small>Communications Coordinator</small>
+                        <small id="en">Communications Coordinator</small>
+                        <small id="fr">Coordonnateur des communications</small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="http://placehold.it/750x450" alt="">
                     <h3>Stacy Célestin
                         <br>
-                        <small>International Director</small>
+                        <small id="en">International Director</small>
+                        <small id="fr">Directeure international</small>
                     </h3>
                 </div>
                 <div class="clearfix"></div>
@@ -169,8 +197,13 @@
 
     <footer>
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12 text-center">
+                    <a href="https://www.facebook.com/jello.aelj/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://twitter.com/jello_aelj?lang=en" class="fa fa-twitter" target="_blank"></a>
+                    <a href="mailto:jello.aelj@gmail.com" class="fa fa-envelope" target="_blank"></a>
+
                     <p>Copyright &copy; JELLO - AELJ 2017</p>
                 </div>
             </div>
@@ -179,6 +212,9 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+    <!-- language script -->
+    <script src="js/languageScript.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>
