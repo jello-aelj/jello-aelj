@@ -82,14 +82,14 @@ function submitEmail(){
 
             //send to formspree
             $.ajax({
-                url:'https://formspree.io/alex.stelzig@hotmail.fr',
+                url:'https://formspree.io/jello.aelj@gmail.com',
                 method:'POST',
                 data: {name:name.val(),
                     _replyto:email.val(),
                      email:email.val(),
                     comments:comments.val(),
                     Japaneselevel:level,
-                    _subject:'JELLO-AEJL REGISTRATION REQUEST (from website)'},
+                    _subject:'JELLO-AELJ REGISTRATION REQUEST (from website)'},
                 dataType:"json",
                 success:function() {
                     // $('#formBlock').hide();
