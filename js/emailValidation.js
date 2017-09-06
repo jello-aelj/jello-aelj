@@ -69,10 +69,13 @@ function submitEmail(){
             document.getElementById("levelError").style.display = "none";
             console.log('success'); 
 
-            $('#name').trigger('reset');
-            $('#email').trigger('reset');
+            $('#name').val("");
+            $('#email').val("");
             // document.getElementById("level").trigger('reset');
-            $('#comments').trigger('reset');
+            $('#comments').val("");
+
+
+            Console.log($('#name').val());
 
             //send to formspree
             $.ajax({

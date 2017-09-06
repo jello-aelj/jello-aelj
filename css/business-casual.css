@@ -246,6 +246,8 @@ select[disabled="disabled"] {
     color: white;
 }
 
-
+#fr{
+    display: none;
+}
 
 
