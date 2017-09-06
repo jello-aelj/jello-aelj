@@ -71,7 +71,7 @@ function submitEmail(){
 
             $('#name').trigger('reset');
             $('#email').trigger('reset');
-            document.getElementById("level").val("");
+            // document.getElementById("level").trigger('reset');
             $('#comments').trigger('reset');
 
             //send to formspree
