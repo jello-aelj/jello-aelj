@@ -69,11 +69,6 @@ function submitEmail(){
             document.getElementById("levelError").style.display = "none";
             console.log('success'); 
 
-
-
-
-            Console.log($('#name').val());
-
             //send to formspree
             $.ajax({
                 url:'https://formspree.io/alex.stelig@hotmail.fr',
