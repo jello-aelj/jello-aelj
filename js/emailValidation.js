@@ -69,20 +69,14 @@ function submitEmail(){
             document.getElementById("levelError").style.display = "none";
             console.log('success'); 
 
-            $('#name').val("");
-            $('#email').val("");
-            
-            $('#comments').val("");
 
-            var element = document.getElementById('level');
-            element.value = 'disable';
 
 
             Console.log($('#name').val());
 
             //send to formspree
             $.ajax({
-                url:'https://formspree.io/jello.aelj@gmail.com',
+                url:'https://formspree.io/alex.stelig@hotmail.fr',
                 method:'POST',
                 data: {name:name.val(),
                     _replyto:email.val(),
@@ -92,10 +86,17 @@ function submitEmail(){
                     _subject:'JELLO-AELJ REGISTRATION REQUEST (from website)'},
                 dataType:"json",
                 success:function() {
-                    // $('#formBlock').hide();
-                    // $('#thankyouBlock').show();
+                    $('#name').val("");
+                    $('#email').val("");
+                    $('#comments').val("");
+                    var element = document.getElementById('level');
+                    element.value = 'disable';
                     alert('Thank you for your registration!')
-                }   
+                }
+                error:function(){
+                    alert('Error while sending the email.')
+                }
+
             });     
         }
 
