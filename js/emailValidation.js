@@ -71,8 +71,11 @@ function submitEmail(){
 
             $('#name').val("");
             $('#email').val("");
-            // document.getElementById("level").trigger('reset');
+            
             $('#comments').val("");
+
+            var element = document.getElementById('leaveCode');
+            element.value = "";
 
 
             Console.log($('#name').val());
