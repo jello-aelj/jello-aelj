@@ -74,7 +74,7 @@ function submitEmail(){
             
             $('#comments').val("");
 
-            var element = document.getElementById('leaveCode');
+            var element = document.getElementById('level');
             element.value = 'disable';
 
 
