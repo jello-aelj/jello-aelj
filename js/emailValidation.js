@@ -25,7 +25,7 @@ function submitEmail(){
 
         var nameEmpty = name.val().trim() == "";
         var emailEmpty = email.val().trim() == "";
-        var levelEmpty = level == "";
+        var levelEmpty = level == "disable";
         var emailFormatInvalid = !validateEmail(email.val());
         
         if(nameEmpty || emailEmpty || levelEmpty || emailFormatInvalid){
@@ -71,7 +71,7 @@ function submitEmail(){
 
             //send to formspree
             $.ajax({
-                url:'https://formspree.io/alex.stelig@hotmail.fr',
+                url:'https://formspree.io/jello.aelj@gmail.com',
                 method:'POST',
                 data: {name:name.val(),
                     _replyto:email.val(),
@@ -87,9 +87,6 @@ function submitEmail(){
                     var element = document.getElementById('level');
                     element.value = 'disable';
                     alert('Thank you for your registration!')
-                }
-                error:function(){
-                    alert('Error while sending the email.')
                 }
 
             });     
